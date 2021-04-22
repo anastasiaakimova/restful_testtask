@@ -13,7 +13,10 @@ import java.util.Set;
         private String password;
         private boolean active;
 
-        // fetch - параметр, который определяет как данные значения будут подгружаться относительно основной сущности
+    public User() {
+    }
+
+    // fetch - параметр, который определяет как данные значения будут подгружаться относительно основной сущности
         //EAGER - сразу же при запросе пользователья подгружает роли
         //LAZY  - подгрузка ролей только когда пользователь обратится к этому полю
         @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)

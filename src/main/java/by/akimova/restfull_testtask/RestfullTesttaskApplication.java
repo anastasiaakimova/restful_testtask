@@ -9,5 +9,4 @@ public class RestfullTesttaskApplication {
     public static void main(String[] args) {
         SpringApplication.run(RestfullTesttaskApplication.class, args);
     }
-
 }
