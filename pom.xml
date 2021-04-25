@@ -100,6 +100,18 @@
             <artifactId>validation-api</artifactId>
             <version>2.0.1.Final</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.webjars/bootstrap -->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>4.6.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.webjars/webjars-locator -->
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>webjars-locator</artifactId>
+            <version>0.40</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -108,7 +120,7 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>2.3.1</version>
                 <configuration>
-                    <driver>org.postgresql.Driver </driver>
+                    <driver>org.postgresql.Driver</driver>
                     <url>jdbc:postgresql://localhost/postgres</url>
                     <user>root</user>
                     <password>root</password>
