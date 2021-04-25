@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class RestfullTesttaskApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(RestfullTesttaskApplication.class, args);
     }
 }
