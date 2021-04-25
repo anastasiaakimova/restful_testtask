@@ -1,4 +1,7 @@
+<!doctype html>
+
 <div th:fragment="header" xmlns:th="http://www.w3.org/1999/xhtml">
+    <html xmlns:th="http://www.thymeleaf.org">
     <header>
         <div class="navbar navbar-dark bg-dark shadow-sm">
             <div class="container">
@@ -11,9 +14,15 @@
                     </svg>
                     <strong>Album</strong>
                 </a>
+
                 <button type="button" class="btn btn-danger">Подать объявление</button>
-                <button type="button" class="btn btn-outline-danger">Войти</button>
+                <form th:action="@{/logout}" method="post">
+                    <button type="submit" class="btn btn-outline-danger" data-bs-toggle="modal"
+                            data-bs-target="#addModal">Войти
+                    </button>
+                </form>
             </div>
         </div>
     </header>
+    </html>
 </div>
