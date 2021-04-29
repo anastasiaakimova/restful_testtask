@@ -77,12 +77,12 @@ CREATE TABLE IF NOT EXISTS cars.car
     transmission integer,
     drive        integer,
     engine       integer,
-    volume       numeric(2, -1),
+    volume       numeric(2, 1),
     body         integer,
-    price        numeric(8, -3),
-    FOREIGN KEY (transmission) REFERENCES transmission (id),
-    FOREIGN KEY (drive) REFERENCES drive (id),
-    FOREIGN KEY (engine) REFERENCES engine (id),
-    FOREIGN KEY (body) REFERENCES body (id)
+    price        numeric(8, 3),
+    FOREIGN KEY (transmission) REFERENCES cars.transmission (id),
+    FOREIGN KEY (drive) REFERENCES cars.drive (id),
+    FOREIGN KEY (engine) REFERENCES cars.engine (id),
+    FOREIGN KEY (body) REFERENCES cars.body (id)
 );
 
