@@ -4,23 +4,23 @@ import by.akimova.restfull_testtask.models.Role;
 import by.akimova.restfull_testtask.models.User;
 import by.akimova.restfull_testtask.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
 
-@Controller
+@RestController
+@RequestMapping("/registration")
 public class RegistrationController {
     @Autowired
     private UserRepo userRepo;
 
-    @GetMapping("/registration")
+    @RequestMapping(value = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public String registration() {
         return "registration";
     }
 
-    @PostMapping("/registration")
+    @RequestMapping(value = "", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public String addUser(User user) {
         User userFromDb = userRepo.findByUsername(user.getUsername());
         //проверка на существование юзера
