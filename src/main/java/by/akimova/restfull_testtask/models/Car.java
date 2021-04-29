@@ -11,15 +11,15 @@ public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String carModel;
     private String brand;
+    private String carModel;
     private String generation;
     private String year;
     private Transmission transmission;
     private Drive drive;
     private Engine engine;
     private String volume;
-    private String body;
+    private Body body;
     private int price;
 
     public Car() {
@@ -89,11 +89,11 @@ public class Car {
         this.volume = volume;
     }
 
-    public String getBody() {
-        return body;
+    public void getBody() {
+        this.body =  body;
     }
 
-    public void setBody(String body) {
+    public void setBody(Body body) {
         this.body = body;
     }
 
