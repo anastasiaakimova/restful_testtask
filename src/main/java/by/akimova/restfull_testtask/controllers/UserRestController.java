@@ -18,9 +18,12 @@ import java.util.logging.LoggingPermission;
 @RequestMapping("/users")
 public class UserRestController {
 
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
 
+    @Autowired
+    public UserRestController(UserService userService){
+        this.userService = userService;
+    }
     @RequestMapping(value = "{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<User> getUser(@PathVariable("id") Long userId) {
         if (userId == null) {

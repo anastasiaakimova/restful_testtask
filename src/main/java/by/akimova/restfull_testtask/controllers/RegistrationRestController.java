@@ -11,9 +11,13 @@ import java.util.Collections;
 
 @RestController
 @RequestMapping("/registration")
-public class RegistrationController {
+public class RegistrationRestController {
+
+    private final UserRepo userRepo;
     @Autowired
-    private UserRepo userRepo;
+    public RegistrationRestController(UserRepo userRepo){
+        this.userRepo = userRepo;
+    }
 
     @RequestMapping(value = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public String registration() {
