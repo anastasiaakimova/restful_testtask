@@ -4,7 +4,6 @@ import lombok.Data;
 
 import javax.persistence.*;
 
-@Data
 @Entity
 @Table(name = "car")
 public class Car {
@@ -90,7 +89,7 @@ public class Car {
     }
 
     public void getBody() {
-        this.body =  body;
+        this.body = body;
     }
 
     public void setBody(Body body) {
